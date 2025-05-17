@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Advanced Pomodoro Timer</h1>
+        
+        <!-- Timer Display -->
+        <div id="timer">
+            <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+        <p id="status">Focus Time</p>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="reset">Reset</button>
+        </div>
+
+        <!-- Custom Timer Settings -->
+        <div class="settings">
+            <h3>Settings</h3>
+            <label>
+                Focus Time (min):
+                <input type="number" id="focus-duration" value="25" min="1" max="60">
+            </label>
+            <label>
+                Short Break (min):
+                <input type="number" id="short-break-duration" value="5" min="1" max="30">
+            </label>
+            <label>
+                Long Break (min):
+                <input type="number" id="long-break-duration" value="15" min="1" max="60">
+            </label>
+            <button id="save-settings">Save</button>
+        </div>
+
+        <!-- Task List -->
+        <div class="task-list">
+            <h3>Tasks</h3>
+            <input type="text" id="task-input" placeholder="Add a task">
+            <button id="add-task">Add Task</button>
+            <ul id="tasks"></ul>
+        </div>
+
+        <!-- Progress Tracker -->
+        <div class="progress">
+            <h3>Focus Sessions Completed: <span id="sessions-completed">0</span></h3>
+        </div>
+
+        <!-- Dark Mode Toggle -->
+        <div class="theme-toggle">
+            <button id="toggle-theme">Toggle Dark Mode</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
